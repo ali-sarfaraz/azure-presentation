@@ -1,0 +1,159 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Azure Devops</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/black.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/monokai.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+</head>
+<body>
+<div class="reveal">
+    <div class="slides">
+        <section data-markdown>
+					<textarea data-template>
+						## Azure(Are You Sure) Devops
+					</textarea>
+        </section>
+        <section data-markdown>
+					<textarea data-template>
+						## Agents
+					</textarea>
+        </section>
+        <section>
+            <section data-markdown>
+					<textarea data-template>
+						## Build Pipelines
+					</textarea>
+            </section>
+            <section data-markdown>
+					<textarea data-template>
+						## YAML
+					</textarea>
+            </section>
+            <section data-markdown>
+					<textarea data-template>
+						## Stages
+					</textarea>
+            </section>
+            <section data-markdown>
+					<textarea data-template>
+						## Publishing Tests
+					</textarea>
+            </section>
+            <section data-markdown>
+					<textarea data-template>
+						## Artifacts
+					</textarea>
+            </section>
+            <section data-markdown>
+					<textarea data-template>
+						## Secrets (Library)
+					</textarea>
+            </section>
+            <section data-markdown>
+					<textarea data-template>
+						## Parallel
+					</textarea>
+            </section>
+            <section data-markdown>
+					<textarea data-template>
+						## Analytics
+					</textarea>
+            </section>
+        </section>
+        <section data-markdown>
+					<textarea data-template>
+						## Service Connections
+					</textarea>
+        </section>
+        <section>
+            <section data-markdown>
+					<textarea data-template>
+						## Release Pipelines
+					</textarea>
+            </section>
+            <section data-markdown>
+					<textarea data-template>
+						## Artifacts
+					</textarea>
+            </section>
+            <section data-markdown>
+					<textarea data-template>
+						## Stages
+					</textarea>
+            </section>
+        </section>
+        <section>
+            <section data-markdown>
+					<textarea data-template>
+						## Agents
+					</textarea>
+            </section>
+            <section data-markdown>
+					<textarea data-template>
+						## Agent Pool
+					</textarea>
+            </section>
+            <section data-markdown>
+                ## Microsoft-hosted agent
+
+                - On demand agents
+                - Can take longer to provision
+            </section>
+            <section data-markdown>
+                ## Self Hosted Agents
+
+                - Builds will run faster.
+                - Leverage asset caching i.e. docker containers, yarn or composer.
+                - Always running container.
+            </section>
+            <section data-markdown>
+                ## Mix And Match
+
+                - We can use both microsoft-hosted agent and self hosted agent to do things in parallel.
+                - Anything that doesn't required to be in our network can be carried on microsoft-hosted agent and anything that requires deployment can use self hosted agent.
+            </section>
+            <section data-markdown>
+                ## Multiple Self Hosted Agents
+
+                Yes. This approach can work well for agents that run jobs that don't consume a lot of shared resources.
+                For example, you could try it for agents that run releases that mostly orchestrate deployments and don't
+                do a lot of work on the agent itself.
+            </section>
+        </section>
+    </div>
+</div>
+
+<script src="js/reveal.js"></script>
+
+<script>
+    // More info about config & dependencies:
+    // - https://github.com/hakimel/reveal.js#configuration
+    // - https://github.com/hakimel/reveal.js#dependencies
+    Reveal.initialize({
+        dependencies: [
+            {src: 'plugin/markdown/marked.js'},
+            {src: 'plugin/markdown/markdown.js'},
+            {src: 'plugin/notes/notes.js', async: true},
+            {src: 'plugin/highlight/highlight.js', async: true}
+        ]
+    });
+</script>
+</body>
+</html>
